@@ -1,4 +1,4 @@
-# myapp
+# netease_cloud_music
 
 A new Flutter project.
 
