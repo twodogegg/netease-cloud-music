@@ -137,6 +137,7 @@ class _SearchOtherResultPageState extends State<SearchOtherResultPage>
                     child: Padding(
                       padding: EdgeInsets.only(left: ScreenUtil().setWidth(10)),
                       child: WidgetMusicListItem(MusicData(
+                          canPlay: true,
                           songName: song.name,
                           mvid: song.mvid,
                           artists: song.artists
@@ -171,6 +172,8 @@ class _SearchOtherResultPageState extends State<SearchOtherResultPage>
                 picUrl: r.album.picUrl.isEmpty
                     ? r.album.artist.img1v1Url
                     : r.album.picUrl,
+                canPlay: true,
+                mp3Url: 'https://music.163.com/song/media/outer/url?id=${r.id}',
                 artists: '${r.artists.map((a) => a.name).toList().join('/')}',
               ))
           .toList(),

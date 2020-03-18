@@ -95,6 +95,7 @@ class _DailySongsPageState extends State<DailySongsPage> {
                                     mvid: d.mvid,
                                     picUrl: d.album.picUrl,
                                     songName: d.name,
+                                    canPlay: true,
                                     artists:
                                     "${d.artists.map((a) => a.name).toList().join('/')} - ${d.album.name}"),
                                 onTap: () {
@@ -125,6 +126,8 @@ class _DailySongsPageState extends State<DailySongsPage> {
                 r.id,
                 name: r.name,
                 picUrl: r.album.picUrl,
+                canPlay: true,
+                mp3Url: 'https://music.163.com/song/media/outer/url?id=${r.id}',
                 artists: '${r.artists.map((a) => a.name).toList().join('/')}',
               ))
           .toList(),

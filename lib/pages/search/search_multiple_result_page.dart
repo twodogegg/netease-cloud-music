@@ -79,8 +79,10 @@ class _SearchMultipleResultPageState extends State<SearchMultipleResultPage>
             MusicData(
                 songName: song.songs[i].name,
                 mvid: song.songs[i].mv,
+                canPlay: true,
                 artists:
                     song.songs[i].ar.map((a) => a.name).toList().join('/')),
+
             onTap: () {
               _playSongs(model, song.songs, i);
             },
@@ -136,6 +138,8 @@ class _SearchMultipleResultPageState extends State<SearchMultipleResultPage>
                 r.id,
                 name: r.name,
                 picUrl: r.al.picUrl,
+                canPlay: true,
+                mp3Url: 'https://music.163.com/song/media/outer/url?id=${r.id}',
                 artists: '${r.ar.map((a) => a.name).toList().join('/')}',
               ))
           .toList(),
