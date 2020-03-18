@@ -211,7 +211,7 @@ class _PlayListPageState extends State<PlayListPage> {
                                 artists:
                                 '${d.ar.map((a) => a.name).toList().join('/')} - ${d.al.name}',
                                 // picUrl: d.al.picUrl,
-                                canPlay: d.al.canPlay
+                                canPlay: d.al.canPlay // 如果用的不是我的地址请改成 canPlay: true
                               ),
                               onTap: () {
                                 playSongs(model, index);
@@ -238,8 +238,8 @@ class _PlayListPageState extends State<PlayListPage> {
                 name: r.name,
                 picUrl: r.al.picUrl,
                 artists: '${r.ar.map((a) => a.name).toList().join('/')}',
-                canPlay: r.al.canPlay,
-                mp3Url: r.al.mp3Url
+                canPlay: r.al.canPlay, // 如果不用我的地址改成 canPlay: true
+                mp3Url: r.al.mp3Url // 如果不用我的地址改成 mp3Url: 'https://music.163.com/song/media/outer/url?id=${r.id}',
               ))
           .toList(),
       index: index,
