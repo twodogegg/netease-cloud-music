@@ -30,7 +30,7 @@ import 'custom_log_interceptor.dart';
 class NetUtils {
   static Dio _dio;
   // static final String baseUrl = 'http://118.24.63.15';
-  static final String baseUrl = 'http://music-api.test';
+  static final String baseUrl = 'http://music-api.twodogegg.com';
 
   static void init() async {
     Directory tempDir = await getTemporaryDirectory();

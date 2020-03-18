@@ -81,8 +81,8 @@ class PlaySongsModel with ChangeNotifier {
       'a': this._songs[curIndex].mp3Url
     });
     _audioPlayer.play(
-        "https://music.163.com/song/media/outer/url?id=${this._songs[curIndex].id}.mp3");
-        // "http://musicres.twodogegg.com/music/485232943.mp3");
+//        "https://music.163.com/song/media/outer/url?id=${this._songs[curIndex].id}.mp3");
+         this._songs[curIndex].mp3Url);
     saveCurSong();
   }
 

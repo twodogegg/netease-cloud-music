@@ -24,10 +24,10 @@ class LogUtil {
     String _tag = (tag == null || tag.isEmpty) ? TAG : tag;
     while (da.isNotEmpty) {
       if (da.length > 1024) {
-        print("$_tag $stag ${da.substring(0, 1024)}");
+//        print("$_tag $stag ${da.substring(0, 1024)}");
         da = da.substring(1024, da.length);
       } else {
-        print("$_tag $stag $da");
+//        print("$_tag $stag $da");
         da = "";
       }
     }
